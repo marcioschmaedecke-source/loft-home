@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loft Home | Lofts em Cuiabá</title>
+<meta name="description" content="27 lofts e casas mobiliados em Cuiabá, perto da UNIC e da UFMT. Veja as datas livres e reserve pelo Airbnb.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Loft Home | Lofts em Cuiabá">
+<meta property="og:description" content="27 lofts e casas mobiliados em Cuiabá, perto da UNIC e da UFMT. Veja as datas livres e reserve pelo Airbnb.">
+<meta property="og:image" content="https://marcioschmaedecke-source.github.io/loft-home/logo.png">
+<meta property="og:url" content="https://marcioschmaedecke-source.github.io/loft-home/">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap">
+<style>
+:root {
+  --bg: #F2F5F0;
+  --surface: #FFFFFF;
+  --fg: #14231C;
+  --muted: #55655C;
+  --line: #D5DDD3;
+  --accent: #1D5A42;
+  --accent-fg: #FFFFFF;
+  --ipe: #E3B31C;
+  --ok-bg: #D9F1E1; --ok-fg: #0F4D29; --wait-bg: #FAEDC2; --wait-fg: #5A4300; --none-bg: #E6EBE5; --none-fg: #44554B;
+  --font-display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1914; --surface: #16251E; --fg: #E5EEE8; --muted: #9DB1A5;
+    --line: #28392F; --accent: #7BCBA4; --accent-fg: #0E1914; --ipe: #F0C94A;
+    --ok-bg: #1C4A33; --ok-fg: #A8E8C3; --wait-bg: #4A3C10; --wait-fg: #F3D98A; --none-bg: #243229; --none-fg: #A9BAB0;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1914; --surface: #16251E; --fg: #E5EEE8; --muted: #9DB1A5;
+  --line: #28392F; --accent: #7BCBA4; --accent-fg: #0E1914; --ipe: #F0C94A;
+    --ok-bg: #1C4A33; --ok-fg: #A8E8C3; --wait-bg: #4A3C10; --wait-fg: #F3D98A; --none-bg: #243229; --none-fg: #A9BAB0;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 16px; line-height: 1.5;
+  padding-block: 28px 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 1040px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px; }
+header { display: flex; flex-direction: column; gap: 14px; }
+.brand { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.logo { width: 96px; height: 96px; border-radius: 20px; border: 1px solid var(--line); flex: none; }
+.eyebrow { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 10px; margin: 0; }
+.eyebrow::before { content: ""; width: 28px; height: 4px; background: var(--ipe); border-radius: 2px; }
+h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(34px, 7vw, 56px); line-height: 1.02; letter-spacing: -.02em; margin: 0; text-wrap: balance; }
+.lead { margin: 0; max-width: 56ch; color: var(--muted); font-size: 18px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.chip { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--fg); text-decoration: none; font-weight: 500; font-size: 15px; }
+.chip b { font-variant-numeric: tabular-nums; color: var(--accent); font-weight: 600; }
+.chip:hover { border-color: var(--accent); }
+section { display: flex; flex-direction: column; gap: 16px; scroll-margin-top: 16px; }
+.sec-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; border-bottom: 1px solid var(--line); padding-bottom: 10px; }
+h2 { font-family: var(--font-display); font-weight: 800; font-size: 28px; letter-spacing: -.01em; margin: 0; }
+.sec-sub { margin: 0; color: var(--muted); font-size: 15px; }
+.grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr)); }
+.card { height: 100%; display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-areas: "num meta" "stat stat" "go go"; gap: 6px 14px; align-items: center; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; color: inherit; text-decoration: none; }
+.card:hover { border-color: var(--accent); }
+.num { grid-area: num; font-family: var(--font-display); font-weight: 800; font-size: 34px; line-height: 1; min-width: 2ch; color: var(--accent); font-variant-numeric: tabular-nums; }
+.meta { grid-area: meta; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.kind { font-weight: 600; font-size: 15px; }
+.bloco { margin-left: 6px; padding: 1px 8px; border-radius: 999px; background: var(--ipe); color: #231A00; font-size: 12px; font-weight: 600; }
+.ttl { color: var(--muted); font-size: 14px; line-height: 1.35; overflow-wrap: anywhere; }
+.stat { grid-area: stat; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; padding-top: 4px; }
+.st { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 13px; font-weight: 600; }
+.st.ok { background: var(--ok-bg); color: var(--ok-fg); }
+.st.wait { background: var(--wait-bg); color: var(--wait-fg); }
+.st.none { background: var(--none-bg); color: var(--none-fg); }
+.noites { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.rot { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-top: 2px; }
+.pers { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; font-size: 14px; font-variant-numeric: tabular-nums; }
+.pers .mais { color: var(--muted); font-size: 13px; }
+.resumo { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+.resumo strong { font-family: var(--font-display); font-size: 22px; font-weight: 800; }
+.resumo span { color: var(--muted); font-size: 14px; }
+.previa { margin: 0; padding: 10px 14px; border-radius: 10px; background: var(--wait-bg); color: var(--wait-fg); font-size: 14px; }
+.go { grid-area: go; margin-top: 4px; padding-top: 10px; border-top: 1px solid var(--line); color: var(--accent); font-weight: 600; font-size: 15px; display: flex; justify-content: space-between; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+footer { border-top: 1px solid var(--line); padding-top: 16px; color: var(--muted); font-size: 14px; }
+footer p { margin: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .card, .chip { transition: border-color .15s ease; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <img class="logo" src="logo.png" alt="Logotipo Loft Home" width="96" height="96">
+      <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
+        <p class="eyebrow">Cuiabá · Mato Grosso</p>
+        <h1>Loft Home</h1>
+      </div>
+    </div>
+    <p class="lead">27 lofts e casas mobiliados perto da UNIC e da UFMT. Escolha o imóvel, abra o anúncio e reserve pelo Airbnb.</p>
+    
+    <div class="resumo"><strong>13 de 27</strong><span>têm noite livre nos próximos 7 dias · situação de 27/10 às 20:12</span></div>
+    <nav class="chips" aria-label="Ir para o imóvel"><a class="chip" href="#petropolis">Petrópolis <b>9</b></a><a class="chip" href="#inglaterra">Inglaterra <b>6</b></a><a class="chip" href="#sao-paulo">São Paulo <b>6</b></a><a class="chip" href="#suica">Suíça <b>4</b></a><a class="chip" href="#iugoslavia">Iugoslávia <b>2</b></a></nav>
+  </header>
+  <section id="petropolis" aria-labelledby="h-petropolis"><div class="sec-head"><h2 id="h-petropolis">Petrópolis</h2><p class="sec-sub">Suíte e climatização, perto da UFMT · 9 lofts</p></div><ul class="grid"><li><a class="card" href="https://www.airbnb.com.br/rooms/1563267473417148529" target="_blank" rel="noopener" aria-label="Loft 2 de Petrópolis: ver no Airbnb"><span class="num">2</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Loft Todo Climatizado, Suíte-Garagem-Prox.UFMT (2)</span></span><span class="stat"><span class="st wait">Livre a partir de 31/10</span><span class="rot">Datas livres</span><ul class="pers"><li>31/10 a 07/11 · 7 noites</li><li>15/11 a 22/11 · 7 noites</li><li>a partir de 21/12</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1714163208313684720" target="_blank" rel="noopener" aria-label="Loft 3 de Petrópolis: ver no Airbnb"><span class="num">3</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Loft Todo Climatizado, Suíte-Garagem-Prox. UFMT (3)</span></span><span class="stat"><span class="st none">Sem vaga por enquanto</span><span class="noites">Nenhuma data livre no calendário atual</span></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1538020604458638709" target="_blank" rel="noopener" aria-label="Loft 4 de Petrópolis: ver no Airbnb"><span class="num">4</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Loft Todo Climatizado, Suíte-Garagem-Prox. UFMT (4)</span></span><span class="stat"><span class="st wait">Livre a partir de 03/11</span><span class="rot">Datas livres</span><ul class="pers"><li>03/11 a 06/11 · 3 noites</li><li>15/11 a 15/12 · 30 noites</li><li>a partir de 23/12</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1542404724118519646" target="_blank" rel="noopener" aria-label="Loft 6 de Petrópolis: ver no Airbnb"><span class="num">6</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Loft Todo Climatizado, Suíte-Garagem-Prox. UFMT (6)</span></span><span class="stat"><span class="st wait">Livre a partir de 15/11</span><span class="rot">Datas livres</span><ul class="pers"><li>15/11 a 10/12 · 25 noites</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1619266311944114134" target="_blank" rel="noopener" aria-label="Loft 7 de Petrópolis: ver no Airbnb"><span class="num">7</span><span class="meta"><span class="kind">Loft <span class="bloco">Bloco A</span></span><span class="ttl">Loft Todo Climatizado, Suíte-Garagem-Prox. UFMT (7)</span></span><span class="stat"><span class="st wait">Livre a partir de 04/11</span><span class="rot">Datas livres</span><ul class="pers"><li>04/11 a 12/11 · 8 noites</li><li>23/11 a 27/11 · 4 noites</li><li>05/12 a 19/12 · 14 noites</li><li class="mais">e mais 1 período</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1751010935127745087" target="_blank" rel="noopener" aria-label="Loft 8 de Petrópolis: ver no Airbnb"><span class="num">8</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Loft Todo Climatizado, Suíte-Garagem-Prox. UFMT (8)</span></span><span class="stat"><span class="st wait">Livre a partir de 30/10</span><span class="rot">Datas livres</span><ul class="pers"><li>30/10 a 19/11 · 20 noites</li><li>a partir de 23/11</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1716090598716103890" target="_blank" rel="noopener" aria-label="Loft 10 de Petrópolis: ver no Airbnb"><span class="num">10</span><span class="meta"><span class="kind">Loft <span class="bloco">Bloco A</span></span><span class="ttl">Loft Todo Climatizado, Suíte-Prox. UFMT (10)</span></span><span class="stat"><span class="st wait">Livre a partir de 03/11</span><span class="rot">Datas livres</span><ul class="pers"><li>03/11 a 07/11 · 4 noites</li><li>a partir de 15/11</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1648003632737769264" target="_blank" rel="noopener" aria-label="Loft 11 de Petrópolis: ver no Airbnb"><span class="num">11</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Loft Todo Climatizado, Suíte-Prox. UFMT (11)</span></span><span class="stat"><span class="st wait">Livre a partir de 31/10</span><span class="rot">Datas livres</span><ul class="pers"><li>31/10 a 07/11 · 7 noites</li><li>15/11 a 15/12 · 30 noites</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1714773135542934838" target="_blank" rel="noopener" aria-label="Loft 12 de Petrópolis: ver no Airbnb"><span class="num">12</span><span class="meta"><span class="kind">Loft <span class="bloco">Bloco A</span></span><span class="ttl">Loft Todo Climatizado, Suíte-Prox. UFMT (12)</span></span><span class="stat"><span class="st wait">Livre a partir de 01/11</span><span class="rot">Datas livres</span><ul class="pers"><li>01/11 a 10/12 · 39 noites</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li></ul></section><section id="inglaterra" aria-labelledby="h-inglaterra"><div class="sec-head"><h2 id="h-inglaterra">Inglaterra</h2><p class="sec-sub">Aconchegantes, perto da UNIC e da UFMT · 6 lofts</p></div><ul class="grid"><li><a class="card" href="https://www.airbnb.com.br/rooms/1674283636322952897" target="_blank" rel="noopener" aria-label="Loft 1 de Inglaterra: ver no Airbnb"><span class="num">1</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Aconchegante, Toda Climatizada, Prox. UNIC/UFMT</span></span><span class="stat"><span class="st none">Sem vaga por enquanto</span><span class="noites">Nenhuma data livre no calendário atual</span></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1488697448584228502" target="_blank" rel="noopener" aria-label="Loft 3 de Inglaterra: ver no Airbnb"><span class="num">3</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Aconchegante, com Garagem, Prox. Unic - UFMT</span></span><span class="stat"><span class="st wait">Livre a partir de 28/10</span><span class="rot">Datas livres</span><ul class="pers"><li>03/11 a 13/11 · 10 noites</li><li>19/11 a 21/12 · 32 noites</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1489996242739478199" target="_blank" rel="noopener" aria-label="Loft 4 de Inglaterra: ver no Airbnb"><span class="num">4</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Aconchegante, Completo, c/ Garagem, Prox. Unic</span></span><span class="stat"><span class="st wait">Livre a partir de 29/10</span><span class="rot">Datas livres</span><ul class="pers"><li>29/10 a 08/11 · 10 noites</li><li>23/11 a 21/12 · 28 noites</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1568455657159138391" target="_blank" rel="noopener" aria-label="Loft 5 de Inglaterra: ver no Airbnb"><span class="num">5</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Aconchegante, com Garagem, Próximo UNIC/UFMT</span></span><span class="stat"><span class="st ok">Livre hoje</span><span class="rot">Datas livres</span><ul class="pers"><li>27/10 a 29/10 · 2 noites</li><li>03/11 a 12/11 · 9 noites</li><li>a partir de 17/11</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1623408605440904133" target="_blank" rel="noopener" aria-label="Loft 6 de Inglaterra: ver no Airbnb"><span class="num">6</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Aconchegante, Completo e Próximo UNIC/UFMT</span></span><span class="stat"><span class="st ok">Livre hoje</span><span class="rot">Datas livres</span><ul class="pers"><li>27/10 a 29/10 · 2 noites</li><li>a partir de 04/12</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1641388095832848351" target="_blank" rel="noopener" aria-label="Loft 7 de Inglaterra: ver no Airbnb"><span class="num">7</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Aconchegante, Completo e Próximo UNIC/UFMT</span></span><span class="stat"><span class="st wait">Livre a partir de 05/11</span><span class="rot">Datas livres</span><ul class="pers"><li>a partir de 05/11</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li></ul></section><section id="sao-paulo" aria-labelledby="h-sao-paulo"><div class="sec-head"><h2 id="h-sao-paulo">São Paulo</h2><p class="sec-sub">Charmosos, perto da UNIC · 6 lofts</p></div><ul class="grid"><li><a class="card" href="https://www.airbnb.com.br/rooms/1456109536773889420" target="_blank" rel="noopener" aria-label="Loft 1 de São Paulo: ver no Airbnb"><span class="num">1</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Loft (SP1)</span></span><span class="stat"><span class="st wait">Livre a partir de 30/10</span><span class="rot">Datas livres</span><ul class="pers"><li>a partir de 30/10</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1732091767747641305" target="_blank" rel="noopener" aria-label="Loft 2 de São Paulo: ver no Airbnb"><span class="num">2</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Loft Charmoso, Climatizado, c/ Garagem, Próx. Unic</span></span><span class="stat"><span class="st wait">Livre a partir de 30/10</span><span class="rot">Datas livres</span><ul class="pers"><li>30/10 a 23/12 · 54 noites</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1732158412621489229" target="_blank" rel="noopener" aria-label="Loft 3 de São Paulo: ver no Airbnb"><span class="num">3</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Loft Charmoso, Climatizado, c/ Garagem, Próx. Unic</span></span><span class="stat"><span class="st wait">Livre a partir de 07/11</span><span class="rot">Datas livres</span><ul class="pers"><li>a partir de 07/11</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1433536452208983746" target="_blank" rel="noopener" aria-label="Loft 4 de São Paulo: ver no Airbnb"><span class="num">4</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Loft charmoso com suíte, Próx. Unic</span></span><span class="stat"><span class="st wait">Livre a partir de 13/11</span><span class="rot">Datas livres</span><ul class="pers"><li>13/11 a 15/11 · 2 noites</li><li>a partir de 01/12</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1359553553074448973" target="_blank" rel="noopener" aria-label="Loft 5 de São Paulo: ver no Airbnb"><span class="num">5</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Loft Charmoso, Próximo a UNIC/UFMT</span></span><span class="stat"><span class="st wait">Livre a partir de 27/11</span><span class="rot">Datas livres</span><ul class="pers"><li>a partir de 27/11</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1426413624889450203" target="_blank" rel="noopener" aria-label="Loft 6 de São Paulo: ver no Airbnb"><span class="num">6</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Loft charmoso com suíte, Próximo Unic</span></span><span class="stat"><span class="st wait">Livre a partir de 02/12</span><span class="rot">Datas livres</span><ul class="pers"><li>a partir de 02/12</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li></ul></section><section id="suica" aria-labelledby="h-suica"><div class="sec-head"><h2 id="h-suica">Suíça</h2><p class="sec-sub">Completos, com garagem, perto da UNIC · 4 lofts</p></div><ul class="grid"><li><a class="card" href="https://www.airbnb.com.br/rooms/1603908225485839999" target="_blank" rel="noopener" aria-label="Loft 1 de Suíça: ver no Airbnb"><span class="num">1</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Loft completo, moderno, Próximo UNIC/UFMT</span></span><span class="stat"><span class="st wait">Livre a partir de 15/11</span><span class="rot">Datas livres</span><ul class="pers"><li>15/11 a 16/11 · 1 noite</li><li>a partir de 27/11</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1595909512827962208" target="_blank" rel="noopener" aria-label="Loft 2 de Suíça: ver no Airbnb"><span class="num">2</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Loft Completo, Decorado, Garagem, Próx. UNIC/UFMT</span></span><span class="stat"><span class="st wait">Livre a partir de 02/11</span><span class="rot">Datas livres</span><ul class="pers"><li>02/11 a 17/11 · 15 noites</li><li>24/11 a 25/11 · 1 noite</li><li>a partir de 01/12</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1595971732192107866" target="_blank" rel="noopener" aria-label="Loft 3 de Suíça: ver no Airbnb"><span class="num">3</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Loft completo charmoso, c/ Garagem, Próx. UNIC</span></span><span class="stat"><span class="st wait">Livre a partir de 02/11</span><span class="rot">Datas livres</span><ul class="pers"><li>02/11 a 12/11 · 10 noites</li><li>17/11 a 19/11 · 2 noites</li><li>a partir de 29/11</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1595971390555083847" target="_blank" rel="noopener" aria-label="Loft 4 de Suíça: ver no Airbnb"><span class="num">4</span><span class="meta"><span class="kind">Loft </span><span class="ttl">Loft completo com Garagem, Próx. UNIC/UFMT</span></span><span class="stat"><span class="st wait">Livre a partir de 04/11</span><span class="rot">Datas livres</span><ul class="pers"><li>04/11 a 07/11 · 3 noites</li><li>13/11 a 18/11 · 5 noites</li><li>a partir de 25/11</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li></ul></section><section id="iugoslavia" aria-labelledby="h-iugoslavia"><div class="sec-head"><h2 id="h-iugoslavia">Iugoslávia</h2><p class="sec-sub">Casas completas, com garagem · 2 casas</p></div><ul class="grid"><li><a class="card" href="https://www.airbnb.com.br/rooms/1445114468094921966" target="_blank" rel="noopener" aria-label="Casa 1 de Iugoslávia: ver no Airbnb"><span class="num">1</span><span class="meta"><span class="kind">Casa </span><span class="ttl">Casa Completa, 2 quartos, 1 suíte, garagem, próx. Unic</span></span><span class="stat"><span class="st wait">Livre a partir de 12/11</span><span class="rot">Datas livres</span><ul class="pers"><li>a partir de 12/11</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li><li><a class="card" href="https://www.airbnb.com.br/rooms/1434201934410547578" target="_blank" rel="noopener" aria-label="Casa 2 de Iugoslávia: ver no Airbnb"><span class="num">2</span><span class="meta"><span class="kind">Casa </span><span class="ttl">Casa toda climatizada, Estilo, Conforto, Vaga Coberta</span></span><span class="stat"><span class="st wait">Livre a partir de 28/10</span><span class="rot">Datas livres</span><ul class="pers"><li>28/10 a 29/10 · 1 noite</li><li>02/11 a 03/11 · 1 noite</li><li>09/11 a 16/12 · 37 noites</li><li class="mais">e mais 1 período</li></ul></span><span class="go">Ver no Airbnb <span aria-hidden="true">&#8599;</span></span></a></li></ul></section>
+  <footer><p>Toda reserva é feita pelo Airbnb, com calendário, preço e avaliações atualizados em cada anúncio. Situação atualizada em 27/10 às 20:12.</p></footer>
+</div>
+<script>
+(function () {
+  var t = new Date("2026-10-27T20:12:18-04:00");
+  if (isNaN(t) || Date.now() - t.getTime() < 6 * 3600 * 1000) return;
+  var p = document.createElement("p");
+  p.className = "previa";
+  p.textContent = "Atenção: a situação abaixo pode estar desatualizada. Confira as datas no anúncio.";
+  var h = document.querySelector("header");
+  h.insertBefore(p, h.querySelector(".resumo"));
+})();
+</script>
+</body>
+</html>
